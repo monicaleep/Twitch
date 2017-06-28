@@ -1,0 +1,13 @@
+
+.online{
+  border:solid pink 2px;
+}
+.offline{
+  border: solid black 2px;
+}
+.unavailable{
+  border: solid red 5px;
+}
+.body {
+  display:flex;
+}
