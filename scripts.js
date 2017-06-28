@@ -1,6 +1,6 @@
 const url = "https://wind-bow.glitch.me/twitch-api/streams/";
 const userArr = ["ESL_SC2","comster404", "ShoutFactoryTV","OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas","dreamhackhs", "brunofin"];
-const users_url = "http://wind-bow.glitch.me/twitch-api/users/"
+const users_url = "https://wind-bow.glitch.me/twitch-api/users/"
 const main = document.querySelector('.main');
 
 console.log(main);
