@@ -8,6 +8,14 @@
 .unavailable{
   border: solid red 5px;
 }
-.body {
-  display:flex;
+
+body{
+  width: 70%;
+  margin: 20px auto;
+  font-family: Ubuntu;
+}
+header{
+  text-align:center;
+  font-family: 'Righteous',cursive;
+  padding-top: 20px;
 }
