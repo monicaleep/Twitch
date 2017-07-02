@@ -22,13 +22,15 @@ document.addEventListener("DOMContentLoaded",function(event){
           var u = document.getElementById(user)
           u.classList.remove("offline")
           u.className += " unavailable";
-          u.innerHTML += "404'd, account not found"
+          u.innerHTML = "<p>" + user + " 404'd, account not found</p>"
         }
       });
     })
     .catch(error => alert(error));
   });
 });
+
+
 function handleErrors(response) {
     if (!response.ok) {
         throw Error(response.statusText);
@@ -39,13 +41,18 @@ function handleErrors(response) {
 function addStream(user, data){
   var streamer = document.createElement("div");
   streamer.id = user;
+  var a = document.createElement("a");
+  var linkText = document.createTextNode(user);
+  a.setAttribute('href', "https://www.twitch.tv/" + user);
+  a.appendChild(linkText);
   if (!data.stream){
     streamer.className += "offline";
-    streamer.innerHTML= "<p>" + user + " offline <br> </p>";
+    streamer.innerHTML= "<p>" + user + " offline </p>";
   }
   else{
     streamer.className += "online";
-    streamer.innerHTML= "<p>" +user + " online <br>" + data._links.self + "<br>" + data.stream.game +"</p>";
+    streamer.innerHTML= "<p>" +user + " online <br>Streaming:" + data.stream.game +"</p>";
   }
+  streamer.appendChild(a);
   main.appendChild(streamer);
 }
