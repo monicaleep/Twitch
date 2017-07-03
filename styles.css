@@ -8,7 +8,9 @@
 .unavailable{
   border: solid red 5px;
 }
-
+.streamer{
+  margin-bottom: 10px;
+}
 body{
   width: 70%;
   margin: 20px auto;
@@ -18,4 +20,9 @@ header{
   text-align:center;
   font-family: 'Righteous',cursive;
   padding-top: 20px;
+}
+
+footer a{
+  display: float;
+  float:right;
 }
