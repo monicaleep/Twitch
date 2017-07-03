@@ -18,18 +18,21 @@ document.addEventListener("DOMContentLoaded",function(event){
     .then(handleErrors)
       .then(response => {  return response.json();  })
       .then( data => {
-        if (data.error){
-          var u = document.getElementById(user)
-          u.classList.remove("offline")
-          u.className += " unavailable";
-          u.innerHTML = "<p>" + user + " 404'd, account not found</p>"
-        }
+        parseUser(data, user);
       });
     })
     .catch(error => alert(error));
   });
 });
 
+function parseUser(data, user){
+  var u = document.getElementById(user)
+  if (data.error){
+    u.classList.remove("offline")
+    u.className += " unavailable";
+    u.innerHTML = "<p>" + user + " 404'd, account not found</p>"
+  }
+}
 
 function handleErrors(response) {
     if (!response.ok) {
@@ -47,12 +50,12 @@ function addStream(user, data){
   a.appendChild(linkText);
   if (!data.stream){
     streamer.className += "offline";
-    streamer.innerHTML= "<p>" + user + " offline </p>";
+    streamer.innerHTML= "<p> offline </p>";
   }
   else{
     streamer.className += "online";
-    streamer.innerHTML= "<p>" +user + " online <br>Streaming:" + data.stream.game +"</p>";
+    streamer.innerHTML= "<p> online <br>Streaming: " + data.stream.game +"</p>";
   }
-  streamer.appendChild(a);
+  streamer.insertBefore(a,streamer.childNodes[0]);
   main.appendChild(streamer);
 }
