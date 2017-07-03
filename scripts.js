@@ -7,12 +7,12 @@ const main = document.querySelector('.main');
 
 document.addEventListener("DOMContentLoaded",function(event){
   //loops through the list of users
-  userArr.forEach(function(user){
+  userArr.forEach((user)=>{
     getInfo(user);
   });
 });
 
-function showOnline(){
+var showOnline = () =>{
   var offline = document.querySelectorAll('.offline , .unavailable');
   var online = document.querySelectorAll('.online')
   for (var i=0; i<offline.length; i++){
@@ -22,14 +22,14 @@ function showOnline(){
     online[j].style.display = "flex";
   }
 }
-function showAll(){
+var showAll = () => {
   var all = document.querySelectorAll('.streamer');
   for (var i=0; i<all.length; i++){
     all[i].style.display = "flex";
   }
 }
 
-function showOffline(){
+var showOffline = () => {
   var offline = document.querySelectorAll('.offline');
   var online = document.querySelectorAll('.online, .unavailable')
   for (var i=0; i<offline.length; i++){
@@ -39,6 +39,7 @@ function showOffline(){
     online[j].style.display = "none";
   }
 }
+
 //Main function that accepts a user as input and calls apis
 function getInfo(user){
   fetch(url+user)

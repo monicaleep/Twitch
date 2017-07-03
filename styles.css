@@ -42,14 +42,16 @@ header{
 
 li{
   display: inline-block;
-  margin-left: 100px;
   padding: 10px;
   border: transparent solid 5px;
+}
 
+form{
+  margin: 0 50px;
+  display:inline-block;
 }
-li:first-child{
-  margin: 0
-}
+
+
 li:hover{
   border: white solid 5px;
 }
