@@ -89,11 +89,11 @@ function addStream(user, data){
   //check if user is streaming
   if (!data.stream){
     streamer.className += "offline";
-    streamer.innerHTML= "<p> offline </p>";
+    streamer.innerHTML= "<p>User offline </p>";
   }
   else{
     streamer.className += "online";
-    streamer.innerHTML= "<p> online Streaming: " + data.stream.game +"</p>";
+    streamer.innerHTML= "<p>Streaming: " + data.stream.game +"</p>";
   }
   streamer.insertBefore(a,streamer.childNodes[0]);
   main.appendChild(streamer);

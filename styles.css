@@ -16,6 +16,8 @@
   margin-bottom: 10px;
   background-color: white;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 body{
@@ -50,7 +52,6 @@ form{
   margin: 0 50px;
   display:inline-block;
 }
-
 
 li:hover{
   border: white solid 5px;
