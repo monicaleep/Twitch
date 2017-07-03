@@ -85,6 +85,7 @@ function addStream(user, data){
   var a = document.createElement("a");
   var linkText = document.createTextNode(user);
   a.setAttribute('href', "https://www.twitch.tv/" + user);
+  a.innerHTML= '<i class="fa fa-twitch" aria-hidden="true"></i> '
   a.appendChild(linkText);
   //check if user is streaming
   if (!data.stream){

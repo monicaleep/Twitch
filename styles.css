@@ -56,3 +56,7 @@ form{
 li:hover{
   border: white solid 5px;
 }
+
+a:hover >i{
+  transform: rotate(-30deg);
+}
