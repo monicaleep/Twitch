@@ -10,11 +10,13 @@
 }
 .streamer{
   margin-bottom: 10px;
+  background-color: white;
 }
 body{
   width: 70%;
   margin: 20px auto;
   font-family: Ubuntu;
+  background-color: grey;
 }
 header{
   text-align:center;
