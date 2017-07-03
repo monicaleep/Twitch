@@ -1,3 +1,6 @@
+* {
+  padding: 0;
+}
 
 .online{
   border:solid pink 2px;
@@ -6,25 +9,45 @@
   border: solid black 2px;
 }
 .unavailable{
-  border: solid red 5px;
+  border: solid red 2px;
 }
+
 .streamer{
   margin-bottom: 10px;
   background-color: white;
+  display: flex;
 }
+
 body{
   width: 70%;
   margin: 20px auto;
   font-family: Ubuntu;
   background-color: grey;
 }
+
+
+/**footer **/
+footer a{
+  display: float;
+  float:right;
+}
+/** Header and Nav **/
 header{
   text-align:center;
   font-family: 'Righteous',cursive;
   padding-top: 20px;
 }
 
-footer a{
-  display: float;
-  float:right;
+li{
+  display: inline-block;
+  margin-left: 100px;
+  padding: 10px;
+  border: transparent solid 5px;
+
+}
+li:first-child{
+  margin: 0
+}
+li:hover{
+  border: white solid 5px;
 }

@@ -1,3 +1,3 @@
 FCC Twitch TV Viewer
 
-Written with Vanilla JS using .fetch API
+Written with Vanilla JS using .fetch API, fontawesome, flexbox.

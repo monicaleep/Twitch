@@ -66,7 +66,7 @@ function addStream(user, data){
   }
   else{
     streamer.className += "online";
-    streamer.innerHTML= "<p> online <br>Streaming: " + data.stream.game +"</p>";
+    streamer.innerHTML= "<p> online Streaming: " + data.stream.game +"</p>";
   }
   streamer.insertBefore(a,streamer.childNodes[0]);
   main.appendChild(streamer);
