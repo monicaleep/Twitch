@@ -25,7 +25,9 @@ body{
   background-color: grey;
 }
 
-
+form:hover{
+  cursor: pointer;
+}
 /**footer **/
 footer a{
   display: float;

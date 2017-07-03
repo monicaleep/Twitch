@@ -12,7 +12,33 @@ document.addEventListener("DOMContentLoaded",function(event){
   });
 });
 
+function showOnline(){
+  var offline = document.querySelectorAll('.offline , .unavailable');
+  var online = document.querySelectorAll('.online')
+  for (var i=0; i<offline.length; i++){
+    offline[i].style.display = "none";
+  }
+  for (var j=0; j<online.length; j++){
+    online[j].style.display = "flex";
+  }
+}
+function showAll(){
+  var all = document.querySelectorAll('.streamer');
+  for (var i=0; i<all.length; i++){
+    all[i].style.display = "flex";
+  }
+}
 
+function showOffline(){
+  var offline = document.querySelectorAll('.offline');
+  var online = document.querySelectorAll('.online, .unavailable')
+  for (var i=0; i<offline.length; i++){
+    offline[i].style.display = "flex";
+  }
+  for (var j=0; j<online.length; j++){
+    online[j].style.display = "none";
+  }
+}
 //Main function that accepts a user as input and calls apis
 function getInfo(user){
   fetch(url+user)
