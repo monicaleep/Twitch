@@ -4,42 +4,12 @@ const USERS_URL = "https://wind-bow.glitch.me/twitch-api/users/";
 const main = document.querySelector('.main');
 
 
-
 document.addEventListener("DOMContentLoaded",function(event){
   //loops through the list of users
   USERARR.forEach((user)=>{
     getInfo(user);
   });
 });
-
-var showOnline = () =>{
-  var offline = document.querySelectorAll('.offline , .unavailable');
-  var online = document.querySelectorAll('.online')
-  for (var i=0; i<offline.length; i++){
-    offline[i].style.display = "none";
-  }
-  for (var j=0; j<online.length; j++){
-    online[j].style.display = "flex";
-  }
-}
-
-var showAll = () => {
-  var all = document.querySelectorAll('.streamer');
-  for (var i=0; i<all.length; i++){
-    all[i].style.display = "flex";
-  }
-}
-
-var showOffline = () => {
-  var offline = document.querySelectorAll('.offline');
-  var online = document.querySelectorAll('.online, .unavailable')
-  for (var i=0; i<offline.length; i++){
-    offline[i].style.display = "flex";
-  }
-  for (var j=0; j<online.length; j++){
-    online[j].style.display = "none";
-  }
-}
 
 //Main function that accepts a user as input and calls apis
 function getInfo(user){
@@ -59,6 +29,37 @@ function getInfo(user){
   })
   .catch(error => alert(error));
 }
+
+var showOnline = () =>{
+  var offline = document.querySelectorAll('.offline , .unavailable');
+  var online = document.querySelectorAll('.online')
+  for (var i=0; i<offline.length; i++){
+    offline[i].style.display = "none";
+  }
+  for (var j=0; j<online.length; j++){
+    online[j].style.display = "";
+  }
+}
+
+var showAll = () => {
+  var all = document.querySelectorAll('.streamer');
+  for (var i=0; i<all.length; i++){
+    all[i].style.display = "";
+  }
+}
+
+var showOffline = () => {
+  var offline = document.querySelectorAll('.offline');
+  var online = document.querySelectorAll('.online, .unavailable')
+  for (var i=0; i<offline.length; i++){
+    offline[i].style.display = "";
+  }
+  for (var j=0; j<online.length; j++){
+    online[j].style.display = "none";
+  }
+}
+
+
 
 //parses user data to see if user exists, edit to DOM
 function parseUser(data, user){

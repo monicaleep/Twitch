@@ -3,13 +3,13 @@
 }
 
 .online{
-  border:solid pink 2px;
+  border:solid green 3px;
 }
 .offline{
   border: solid black 2px;
 }
 .unavailable{
-  border: solid red 2px;
+  border: solid red 3px;
 }
 
 .streamer{
@@ -33,11 +33,13 @@ body{
 form:hover{
   cursor: pointer;
 }
+
 /**footer **/
 footer a{
   display: float;
   float:right;
 }
+
 /** Header and Nav **/
 header{
   text-align:center;
