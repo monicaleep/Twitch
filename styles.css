@@ -19,6 +19,9 @@
   justify-content: space-between;
   align-items: center;
 }
+.streamer *{
+  padding: 0 10px
+}
 
 body{
   width: 70%;
@@ -59,4 +62,7 @@ li:hover{
 
 a:hover >i{
   transform: rotate(-30deg);
+}
+a{
+  text-decoration: none;
 }

@@ -1,13 +1,13 @@
-const url = "https://wind-bow.glitch.me/twitch-api/streams/";
-const userArr = ["ESL_SC2","comster404", "ShoutFactoryTV","OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx","dreamhackhs", "brunofin", "GamesDoneQuick"];
-const users_url = "https://wind-bow.glitch.me/twitch-api/users/";
+const URL = "https://wind-bow.glitch.me/twitch-api/streams/";
+const USERARR = ["ESL_SC2","comster404", "ShoutFactoryTV","OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx","dreamhackhs", "brunofin", "GamesDoneQuick"];
+const USERS_URL = "https://wind-bow.glitch.me/twitch-api/users/";
 const main = document.querySelector('.main');
 
 
 
 document.addEventListener("DOMContentLoaded",function(event){
   //loops through the list of users
-  userArr.forEach((user)=>{
+  USERARR.forEach((user)=>{
     getInfo(user);
   });
 });
@@ -22,6 +22,7 @@ var showOnline = () =>{
     online[j].style.display = "flex";
   }
 }
+
 var showAll = () => {
   var all = document.querySelectorAll('.streamer');
   for (var i=0; i<all.length; i++){
@@ -42,14 +43,14 @@ var showOffline = () => {
 
 //Main function that accepts a user as input and calls apis
 function getInfo(user){
-  fetch(url+user)
+  fetch(URL+user)
   .then(handleErrors)
   .then(response => {return response.json(); })
   .then( data => {
     addStream(user, data);
   })
   .then(function(){
-  fetch(users_url+user)
+  fetch(USERS_URL+user)
   .then(handleErrors)
     .then(response => {  return response.json();  })
     .then( data => {
