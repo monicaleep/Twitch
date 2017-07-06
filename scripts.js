@@ -1,5 +1,5 @@
 const URL = "https://wind-bow.glitch.me/twitch-api/streams/";
-const USERARR = ["ESL_SC2","comster404", "ShoutFactoryTV","OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx","dreamhackhs", "brunofin", "GamesDoneQuick"];
+const USERARR = ["ESL_SC2","comster404", "ShoutFactoryTV","OgamingSC2", "cretetion", "freecodecamp", "habathcx","dreamhackhs", "brunofin", "GamesDoneQuick"];
 const USERS_URL = "https://wind-bow.glitch.me/twitch-api/users/";
 const main = document.querySelector('.main');
 
@@ -68,6 +68,11 @@ function parseUser(data, user){
     u.classList.remove("offline")
     u.className += " unavailable";
     u.innerHTML = "<p>" + user + " account not found</p>"
+  }
+  else{
+    image = document.createElement("img");
+    image.setAttribute("src",data.logo);
+    u.insertBefore(image,u.childNodes[0]);
   }
 }
 

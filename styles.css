@@ -16,7 +16,7 @@
   margin-bottom: 10px;
   background-color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 .streamer *{
@@ -28,6 +28,11 @@ body{
   margin: 20px auto;
   font-family: Ubuntu;
   background-color: grey;
+}
+
+img{
+  width: 10%;
+  margin: 20px 20px;
 }
 
 form:hover{
@@ -66,5 +71,6 @@ a:hover >i{
   transform: rotate(-30deg);
 }
 a{
+  font-size: 20px;
   text-decoration: none;
 }
