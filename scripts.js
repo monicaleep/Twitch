@@ -67,7 +67,7 @@ function parseUser(data, user){
   if (data.error){
     u.classList.remove("offline")
     u.className += " unavailable";
-    u.innerHTML = "<p>" + user + " account not found</p>"
+    u.innerHTML = "<p>" + user + "</p><p> Account Not Found</p>"
   }
   else{
     image = document.createElement("img");
