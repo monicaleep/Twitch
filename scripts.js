@@ -4,7 +4,10 @@ const USERS_URL = "https://wind-bow.glitch.me/twitch-api/users/";
 const main = document.querySelector('.main');
 
 
-document.addEventListener("DOMContentLoaded",function(event){
+document.addEventListener("DOMContentLoaded",function(){
+  document.querySelector(".filter-all").addEventListener("click",showAll);
+  document.querySelector(".filter-online").addEventListener("click",showOnline);
+  document.querySelector(".filter-offline").addEventListener("click",showOffline);
   //loops through the list of users
   USERARR.forEach((user)=>{
     getInfo(user);
